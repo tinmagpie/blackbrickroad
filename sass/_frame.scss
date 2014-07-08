@@ -1,0 +1,52 @@
+/* Frame positioning */
+body {
+  @include user-select(none);
+}
+
+#frame {
+  width: 100%;
+  max-width: $house-width;
+  min-width: 700px;
+  overflow: hidden;
+  padding-left: $instructions-width-ems + 4em;
+  position: fixed;
+  top: 0; left: 0;
+  @include box-sizing(border-box);
+  [data-progress="cleaning-house"] &, [data-progress="dialog-outro"] & {
+    @include transition(opacity, 2s);
+  }
+}
+
+/* House */
+#house {
+  position: absolute;
+  top: 0; left: $instructions-width-ems;
+  z-index: 1;
+  [data-currentFloor="downstairs"] & {
+    @include translate(0, -50%);
+    @include animation(goDown 2s $floor-easing);    
+  }
+  [data-currentFloor="upstairs"] & {
+    @include animation(goUp 2s $floor-easing);    
+  }
+  @include transition(transform 1.75s $floor-easing);
+}
+
+.floor {
+  @include background-size(100% auto);
+  z-index: -1;
+}
+
+@include keyframes(goUp) {
+  0% { opacity: 1 }
+  25% { opacity: 0 }
+  75% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+@include keyframes(goDown) {
+  0% { opacity: 1 }
+  25% { opacity: 0 }
+  75% { opacity: 0 }
+  100% { opacity: 1 }
+}
