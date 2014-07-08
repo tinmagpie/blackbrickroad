@@ -3,20 +3,29 @@
   h1, h2 { font-weight: normal; }
   ul, li { margin: 0; padding: 0; list-style: none; }
   /* Image replacement */
+  .logo { display: block; height: 0; text-indent: 100%; white-space: nowrap; overflow: hidden; }
+  .logo br { display: none; }
   /* Clear Fix */
   .gallery:before, .gallery:after { content: " "; /* 1 */ display: table; /* 2 */ }
   .gallery:after { clear: both; }
   /* Hide from both screenreaders and browsers: h5bp.com/u */
   .hidden { display: none !important; visibility: hidden; }
+  .for-print-only { display: none; }
   .visuallyhidden, .screen-reader-text { position: absolute; top: 0; left: 0; width: 1px; height: 1px; text-indent: 100%; white-space: nowrap; overflow: hidden; padding: 0; border: 0; overflow: hidden; clip: rect(0 0 0 0); }
-  html { font-size: 112.5%; line-height: 1.33333em; }
+  html { font-size: 150%; line-height: 1.33333em; }
   body, h1, h2, h3, h4, h5, h6 { font-size-adjust: 0.5; }
-  body { font-size: 1rem; font-family: "prenton", sans-serif; font-weight: 400; }
+  body { font-size: 1rem; font-family: "prenton", sans-serif; font-weight: 400; text-align: center; }
   [data-icon]:before { font-family: 'icomoon'; content: attr(data-icon); speak: none; /* Not to be trusted, but hey. */ }
   @font-face { font-family: 'icomoon'; src: url("../fonts/icomoon.eot"); src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg"); font-weight: normal; font-style: normal; }
-  /* envelope: "\65" e bubbles: "\62" b googleplus: "\67" g facebook: "\66" f instagram: "\69" i twitter: "\54" t twitteralt: "\54" T tumblr: "\75" u pinterest: "\70" p */
-  .js h1, .js h2, .js p, .js blockquote, .js cite, .js dl { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: opacity 1s ease-in; -o-transition: opacity 1s ease-in; -webkit-transition: opacity 1s ease-in; transition: opacity 1s ease-in; }
-  .fontsLoaded h1, .fontsLoaded h2, .fontsLoaded p, .fontsLoaded blockquote, .fontsLoaded cite, .fontsLoaded dl, .fontsNotLoaded h1, .fontsNotLoaded h2, .fontsNotLoaded p, .fontsNotLoaded blockquote, .fontsNotLoaded cite, .fontsNotLoaded dl { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+  .js h1, .js div, .js span, .js p, .js form { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: opacity 0.5s ease-in 0; -o-transition: opacity 0.5s ease-in 0; -webkit-transition: opacity 0.5s ease-in; -webkit-transition-delay: 0; transition: opacity 0.5s ease-in 0; }
+  .fontsLoaded h1, .fontsLoaded div, .fontsLoaded span, .fontsLoaded p, .fontsLoaded form, .fontsNotLoaded h1, .fontsNotLoaded div, .fontsNotLoaded span, .fontsNotLoaded p, .fontsNotLoaded form { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+  .socializing { font-size: 2rem; mask-image: url(../img/icon-mask.png); -webkit-mask-image: url(../img/icon-mask.png); }
+  .socializing a { line-height: 2rem; }
+  .socializing, .contact { margin-top: 1.33333rem; margin-bottom: 1.33333rem; }
+  .socializing a, .contact a { text-decoration: none; }
+  .socializing li, .contact li { display: inline-block; }
+  .contact li { margin: 0 .5rem; }
+  .contact .line { text-decoration: underline; }
   /* blockquote { @include adjust-font-size-to(24px, 3/2); color: $butter; position: relative; text-indent: 1.25em; font-weight: $font-weight-light; @include margin-trailer(); &:before { @include adjust-font-size-to(48px, 3/2); display: block; content: "\201C"; position: absolute; left: -.625em; top: 0; color: darken($color-canvas, 10%); } }  cite { &:before { content: "\2014 \2009"; margin-left: -1em; } display: block; font-size: .75rem; text-align: center; @include margin-leader(.5); @include adjust-font-size-to(16px, 1); @include breakpoint($window-width-med) { text-align: right; } } */
   .page1 { padding: .5em .5em 2em; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; } }
 @media screen and (min-width: 43.75em) { .page1 { padding: 1em; } }
@@ -46,11 +55,19 @@
   .gallery span { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; display: block; position: absolute; top: 0; left: 0; z-index: 4; width: 100%; height: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 1.33333rem; -moz-transition: opacity 1s ease-out; -o-transition: opacity 1s ease-out; -webkit-transition: opacity 1s ease-out; transition: opacity 1s ease-out; }
   .gallery a { display: block; width: 100%; height: 100%; }
   .gallery a:hover span, .gallery a:active span, .gallery a:focus span { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
-  body { background: #321131; color: #ffa031; }
+  img { max-width: 100%; }
+  body { background: url('../img/curlleft.png?1404595079') 0 0 no-repeat, url('../img/curlright.png?1404595061') 100% 0 no-repeat, #61183b; color: #ffa031; }
   a:link { color: #f6f3d9; }
-  a:visited { color: #f8edcd; }
-  a:hover, a:active, a:focus { color: #f8edcd; }
-  .for-print-only { display: none; } }
+  a:visited { color: #ece6b0; }
+  a:hover, a:active, a:focus { color: white; }
+  .logo { background: url('../img/logo.png?1404595157'); margin: 0 auto; width: 278px; height: 307px; }
+  .subscribe-here { background: url('../img/bg_form.png?1404852024') no-repeat; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; margin: 0 auto; padding: 246px 91px 0 227px; width: 540px; height: 442px; }
+  .subscribe-here input { background: #ffdcb8; border: 0; color: #b85d00; font-size: .75rem; padding: .25rem .25rem; width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; }
+  .subscribe-here ::-webkit-input-placeholder { /* WebKit browsers */ color: #b85d00; }
+  .subscribe-here :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ color: #b85d00; opacity: 1; }
+  .subscribe-here ::-moz-placeholder { /* Mozilla Firefox 19+ */ color: #b85d00; opacity: 1; }
+  .subscribe-here :-ms-input-placeholder { /* Internet Explorer 10+ */ color: #b85d00; }
+  .subscribe-here .button { background: #de1861; border-radius: .25rem; color: #f9c9db; cursor: pointer; } }
 @media print { body { font-size: 12pt; line-height: 1.25; }
   h1 { font-size: 36pt; line-height: 1.25; }
   h2 { font-size: 24pt; line-height: 1.25; }

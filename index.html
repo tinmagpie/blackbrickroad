@@ -33,6 +33,16 @@
         <script type="text/javascript" src="//use.typekit.net/cxy4dvz.js"></script>
 
         <script>
+            try{
+                Typekit.load({
+                    active: function() {
+                        document.body.classList.add('fontsLoaded');
+                    },
+                    inactive: function() {
+                        document.body.classList.add('fontsNotLoaded');
+                    }
+                })
+            }catch(e){}
             document.documentElement.className =
                document.documentElement.className.replace("no-js","js");
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -46,10 +56,14 @@
 
     </head>
     <body>
-        <h1>The Black Brick Road of O.Z.</h1>
+        <h1 class="logo">The Black Brick Road of O.Z.</h1>
         <p>The beloved <a href="http://www.blackbrickroadofoz.com/">interactive web comic</a> is coming to Kindle Fire in October, 2014.</p>
+        <p>Take Dolly Gale and her little cat Toothy with you wherever you may roam, offline and on!</p>
 
-<form action="//rachelthegreat.us1.list-manage.com/subscribe/post?u=0a8f219cf8284562f91a26ee9&amp;id=b02417d2d2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate not-for-print" target="_blank" novalidate>
+        <img src="img/p_kindlefire.png" alt="The Black Brick Road of O.Z. app on a Kindle Fire." />
+
+        <h2>We'll tell you when it's live!</h2>
+<form action="//rachelthegreat.us1.list-manage.com/subscribe/post?u=0a8f219cf8284562f91a26ee9&amp;id=b02417d2d2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate not-for-print subscribe-here" target="_blank" novalidate>
     <label for="mce-EMAIL" class="visuallyhidden">Subscribe to our mailing list</label>
     <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
     <input type="hidden" value="1" name="group[4261][1]" id="mce-group[4261]-4261-0">
@@ -57,20 +71,32 @@
         <label for="follies">Humans: skip this field.</label>
         <input type="text" name="b_0a8f219cf8284562f91a26ee9_b02417d2d2" tabindex="-1" value="" id="follies">
     </div>
-    <div class="clear"><input type="submit" value="Email me when it comes out!" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    <div class="clear"><input type="submit" value="Sign up!" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
 </form>
+
         <p class="for-print-only hidden">
             <a href="http://eepurl.com/Yqlqj">Sign up for our mailing list to receive an announcement</a> when the app is available.
         </p>
+
         <footer>
-            <div class="logo_tinmagpie">
-                <a href="http://tinmagpie.com">Tin Magpie</a>
-            </div>
+            <a href="http://tinmagpie.com" class="logo_tinmagpie">
+                <img src="img/logo_tinmagpie.png" alt="Tin Magpie"/>
+            </a>
             <p>We’re listening.</p>
-            <div class="contact">
-                <a href="mailto:bbr@tinmagpie.com">bbr@tinmagpie.com</a>
-                <a href="https://twitter.com/search?q=%23blackbrickroad&amp;src=typd">#blackbrickroad</a>
-            </div>
+            <ul class="contact">
+                <li>
+                    <a href="mailto:bbr@tinmagpie.com">
+                        <span aria-hidden="true" data-icon="e"></span>
+                        <span class="line">bbr@tinmagpie.com</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/search?q=%23blackbrickroad&amp;src=typd">
+                        <span aria-hidden="true" data-icon="T"></span>
+                        <span class="line">#blackbrickroad</span>
+                    </a>
+                </li>
+            </ul>
             <ul class="socializing">
                 <li>
                     <a href="https://www.facebook.com/tinmagpie">
@@ -111,9 +137,9 @@
             </ul>
             </div>
         </footer>
-
+<!--
         <script src="js/vendor/ifvisible-3.min.js"></script>
         <script src="js/game.js"></script>
 
-    </body>
+ -->    </body>
 </html>

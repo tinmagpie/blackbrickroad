@@ -27,6 +27,10 @@
     visibility: hidden;
 }
 
+.for-print-only {
+    display: none;
+}
+
 // For the icon fonts ala http://css-tricks.com/html-for-icon-font-usage/
 .visuallyhidden, .screen-reader-text {
   position: absolute;

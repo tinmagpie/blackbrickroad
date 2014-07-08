@@ -1,9 +1,15 @@
 //@import "logo/*.png";
 $credits-use-percentages: true;
 
+img { max-width: 100%;}
+
 body {
-  background: $color-canvas;
-  color: $color-text;
+  @include background(
+    image-url("curlleft.png") 0 0 no-repeat,
+    image-url("curlright.png") 100% 0 no-repeat,
+    $color-canvas
+  );
+    color: $color-text;
 }
 
 a {
@@ -12,6 +18,51 @@ a {
   &:hover, &:active, &:focus { color: $color-linkActivated }
 }
 
-.for-print-only {
-    display: none;
+.logo {
+    @extend %ir;
+    @include background(image-url("logo.png"));
+    margin: 0 auto;
+    width: 278px; height: 307px;
+}
+
+.logo_tinmagpie {
+    //width: 473px;
+}
+
+.subscribe-here {
+    @include background(image-url("bg_form.png") no-repeat);
+    @include box-sizing(border-box);
+    margin: 0 auto;
+    padding: 246px 91px 0 227px;
+    width: 540px; height: 442px;
+    input {
+        background: lighten(#ff901f, 30%);
+        border: 0;
+        color: darken(#ff901f, 20%);
+        font-size: .75rem;
+        padding: .25rem .25rem;
+        width: 100%;
+        @include box-sizing(border-box);
+        text-align: center;
+    }
+    ::-webkit-input-placeholder { /* WebKit browsers */
+        color: darken(#ff901f, 20%);
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: darken(#ff901f, 20%);
+        opacity:  1;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: darken(#ff901f, 20%);
+        opacity:  1;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: darken(#ff901f, 20%);
+    }
+    .button {
+        background: $carmine;
+        border-radius: .25rem;
+        color: lighten($carmine, 40%);
+        cursor: pointer;
+    }
 }

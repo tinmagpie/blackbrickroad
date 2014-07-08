@@ -17,16 +17,17 @@ $butter: #f8edcd;
 $bright-gold: #ffa031;
 $gold: #f48c1b;
 $deep-gold: #db601e;
+$carmine: #de1861;
 
 //$color-link-alt: lighten($sapphire, 25%);
 //$color-linkVisited-alt: lighten($amethyst, 25%);
 //$color-linkActivated-alt: lighten($sapphire, 35%);
 
 $color-link: $cream;
-$color-linkVisited: $butter;
-$color-linkActivated: $butter;
+$color-linkVisited: darken($cream, 10%);
+$color-linkActivated: #fff;
 
-$color-canvas: $deep-purple;
+$color-canvas: $deep-red;
 $color-text: $bright-gold;
 
 //Fonts
