@@ -11,6 +11,43 @@ body, h1, h2, h3, h4, h5, h6 {
   font-size-adjust: 0.5;
 }
 
+body {
+  font-size: 1rem;
+  font-family: $font-regular;
+  font-weight: 400;
+}
+
+//anything iconic
+[data-icon]:before {
+  font-family: 'icomoon';
+  content: attr(data-icon);
+  speak: none; /* Not to be trusted, but hey. */
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot');
+    src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/icomoon.woff') format('woff'),
+         url('../fonts/icomoon.ttf') format('truetype'),
+         url('../fonts/icomoon.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Icon Reference List
+/*
+envelope: "\65" e
+bubbles: "\62" b
+googleplus: "\67" g
+facebook: "\66" f
+instagram: "\69" i
+twitter: "\54" t
+twitteralt: "\54" T
+tumblr: "\75" u
+pinterest: "\70" p
+*/
+
 // if there's JS, don't show any text! Set it all to opacity 0
 .js {
   h1, h2, p, blockquote, cite, dl {
@@ -26,20 +63,11 @@ body, h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.page {
-  font-size: 1rem;
-  font-family: $font-regular;
-  font-weight: 400;
 
-}
-
-%title {
-  font-weight: 300;
-}
-
+/*
 blockquote {
   @include adjust-font-size-to(24px, 3/2);
-  color: darken($color-canvas, 30%);
+  color: $butter;
   position: relative;
   text-indent: 1.25em;
   font-weight: $font-weight-light;
@@ -69,38 +97,4 @@ cite {
     text-align: right;
   }
 }
-
-dl {
-  // font-family: $font-georgia;
-  @include margin-trailer(2);
-  @include breakpoint($window-width-lrg) {
-    @include adjust-font-size-to(24px, 3/2);
-  }
-}
-
-dd {
-  @include margin-leader();
-  @include breakpoint($window-width-med) {
-    margin-top: 0;
-    @include margin-trailer();
-  }
-  margin-left: .5em;
-  padding-left: .5em;
-  text-indent: -.5em;
-}
-
-h2 {
-  @include adjust-font-size-to(36px, 3/2);
-  font-weight: $font-weight-light;
-  text-align: center;
-}
-
-.gallery {
-  @include adjust-font-size-to(22px, 3/2);
-  @include breakpoint($gallery-pics) {
-    @include adjust-font-size-to(18px, 1);
-  }
-  @include breakpoint($window-width-lrg) {
-    // text-align: right;
-  }
-}
+*/

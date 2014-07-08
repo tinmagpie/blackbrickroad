@@ -110,7 +110,6 @@ $include-border-box: true; //unless I change box-sizing of all w/
     }
   }
   li {
-    $background: $pelagic;
     @include grid-span(9, 1);
     @include margin-trailer();
     height: rhythm(8);
@@ -127,7 +126,6 @@ $include-border-box: true; //unless I change box-sizing of all w/
   }
   span {
     @include opacity(0);
-    background: rgba($sky, .85);
     display:block;
     position: absolute;
     top: 0; left: 0;

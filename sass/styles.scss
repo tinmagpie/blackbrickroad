@@ -5,15 +5,12 @@
 // media queries w/ Breakpoint
 @import "breakpoint";
 
-// @import "compass/utilities/sprites";
-
 @media screen {
 	// Remove unwanted browser default stylin's on body, etc.
 	@import "destyle";
 
 	// Universally resusable stuff goes here.
 	@import "variables";
-	// @import "mixins";
 	@import "extends";
 
 	// General styles for background + shared styles for universal elements.

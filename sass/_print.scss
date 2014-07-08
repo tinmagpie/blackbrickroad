@@ -39,7 +39,11 @@
     }
   }
 
-  img {display: none}
+  img,
+  .visuallyhidden,
+  .not-for-print {
+    display: none;
+  }
 
   a { text-decoration: none; }
   a:after{

@@ -1,4 +1,17 @@
-html { 
-  background: #000; 
-  font-family: $writing;
+//@import "logo/*.png";
+$credits-use-percentages: true;
+
+body {
+  background: $color-canvas;
+  color: $color-text;
+}
+
+a {
+  &:link { color: $color-link }
+  &:visited { color: $color-linkVisited }
+  &:hover, &:active, &:focus { color: $color-linkActivated }
+}
+
+.for-print-only {
+    display: none;
 }
