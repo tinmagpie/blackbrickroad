@@ -1,9 +1,11 @@
 @import "compass/support";
-@import "compass/css3/"; // css3 helpers
-@import "compass/utilities/sprites";
+@import "compass/css3/";
+@import "singularitygs";
 
 // media queries w/ Breakpoint
-// @import "breakpoint";
+@import "breakpoint";
+
+// @import "compass/utilities/sprites";
 
 @media screen {
 	// Remove unwanted browser default stylin's on body, etc.
@@ -11,25 +13,14 @@
 
 	// Universally resusable stuff goes here.
 	@import "variables";
-	@import "mixins";
+	// @import "mixins";
 	@import "extends";
 
-	// General styles for background + shared styles for universal elements. 
+	// General styles for background + shared styles for universal elements.
+	@import "typography";
+	@import "grids";
 	@import "foundation";
 
-	// States of the game
-	@import "states";
-
-	// Game's Interface
-	@import "frame";
-	@import "ui";
-	@import "credits";
-
-	// the rooms and their items
-	@import "items";
-	@import "photos";
-	@import "letters";
-	@import "upstairs";
-	@import "downstairs";
-
 }
+
+@import "print";

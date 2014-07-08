@@ -1,0 +1,106 @@
+@import "compass/typography/vertical_rhythm";
+
+$base-font-size: 18px;
+$base-line-height: 24px;
+$rhythm-unit: 'rem';
+@include establish-baseline;
+$rem-with-px-fallback: false;
+
+// Scale from http://typecast.com/blog/a-more-modern-scale-for-web-typography
+body, h1, h2, h3, h4, h5, h6 {
+  font-size-adjust: 0.5;
+}
+
+// if there's JS, don't show any text! Set it all to opacity 0
+.js {
+  h1, h2, p, blockquote, cite, dl {
+    @include opacity(0);
+    @include transition(opacity 1s ease-in);
+  }
+}
+
+// Once the fonts are or are not loaded, fade the text in
+.fontsLoaded, .fontsNotLoaded {
+  h1, h2, p, blockquote, cite, dl {
+    @include opacity(1);
+  }
+}
+
+.page {
+  font-size: 1rem;
+  font-family: $font-regular;
+  font-weight: 400;
+
+}
+
+%title {
+  font-weight: 300;
+}
+
+blockquote {
+  @include adjust-font-size-to(24px, 3/2);
+  color: darken($color-canvas, 30%);
+  position: relative;
+  text-indent: 1.25em;
+  font-weight: $font-weight-light;
+  @include margin-trailer();
+  &:before {
+    @include adjust-font-size-to(48px, 3/2);
+    display: block;
+    content: "\201C";
+    position: absolute;
+    left: -.625em;
+    top: 0;
+    color: darken($color-canvas, 10%);
+  }
+}
+
+cite {
+  &:before {
+    content: "\2014 \2009";
+    margin-left: -1em;
+  }
+  display: block;
+  font-size: .75rem;
+  text-align: center;
+  @include margin-leader(.5);
+  @include adjust-font-size-to(16px, 1);
+  @include breakpoint($window-width-med) {
+    text-align: right;
+  }
+}
+
+dl {
+  // font-family: $font-georgia;
+  @include margin-trailer(2);
+  @include breakpoint($window-width-lrg) {
+    @include adjust-font-size-to(24px, 3/2);
+  }
+}
+
+dd {
+  @include margin-leader();
+  @include breakpoint($window-width-med) {
+    margin-top: 0;
+    @include margin-trailer();
+  }
+  margin-left: .5em;
+  padding-left: .5em;
+  text-indent: -.5em;
+}
+
+h2 {
+  @include adjust-font-size-to(36px, 3/2);
+  font-weight: $font-weight-light;
+  text-align: center;
+}
+
+.gallery {
+  @include adjust-font-size-to(22px, 3/2);
+  @include breakpoint($gallery-pics) {
+    @include adjust-font-size-to(18px, 1);
+  }
+  @include breakpoint($window-width-lrg) {
+    // text-align: right;
+  }
+}
