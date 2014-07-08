@@ -4,11 +4,14 @@ $credits-use-percentages: true;
 img { max-width: 100%;}
 
 body {
-  @include background(
-    image-url("curlleft.png") 0 0 no-repeat,
-    image-url("curlright.png") 100% 0 no-repeat,
-    $color-canvas
-  );
+    @include breakpoint($window-width-med) {
+        @include background(
+            image-url("curlleft.png") 0 0 no-repeat,
+            image-url("curlright.png") 100% 0 no-repeat,
+            $color-canvas
+          );
+    }
+    background: $color-canvas;
     color: $color-text;
 }
 
@@ -21,20 +24,30 @@ a {
 .logo {
     @extend %ir;
     @include background(image-url("logo.png"));
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
     width: 278px; height: 307px;
 }
 
 .logo_tinmagpie {
-    //width: 473px;
+  display: block;
+  margin: 0 auto;
+  width: 473/2 * 1px;
+  @include breakpoint($hidpi) {
+    @include margin-trailer(-2);
+    @include margin-leader(-2);
+    @include scale(0.5, 0.5);
+  }
 }
 
 .subscribe-here {
-    @include background(image-url("bg_form.png") no-repeat);
-    @include box-sizing(border-box);
     margin: 0 auto;
-    padding: 246px 91px 0 227px;
-    width: 540px; height: 442px;
+    @include breakpoint(595px) {
+        @include background(image-url("bg_form.png") no-repeat);
+        @include box-sizing(border-box);
+        padding: 246px 91px 0 227px;
+        width: 540px; height: 442px;
+    }
     input {
         background: lighten(#ff901f, 30%);
         border: 0;
@@ -65,4 +78,21 @@ a {
         color: lighten($carmine, 40%);
         cursor: pointer;
     }
+}
+
+.main {
+    border-bottom: $color-text dashed 1px;
+    @include padding-trailer();
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.news {
+    @include padding-leader();
+}
+
+footer {
+    border-top: .25rem $color-canvas solid;
+    @include padding-leader();
+    @include background(image-url("stripe.png"));
 }

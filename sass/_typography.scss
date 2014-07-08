@@ -51,6 +51,23 @@ body {
   }
 }
 
+.intro, footer {
+  p{
+    margin-top: 0;
+    @include margin-trailer();
+  }
+}
+
+h2 {
+  font-size: 1rem;
+  margin: 0;
+  @include margin-trailer(.5);
+  @include breakpoint($window-width-med) {
+  font-weight: $font-weight-light;
+    @include adjust-font-size-to(32px, 3/2);
+  }
+}
+
 .socializing {
   font-size: 2rem;
   mask-image: url(../img/icon-mask.png);
@@ -61,8 +78,7 @@ body {
 }
 
 .socializing, .contact {
-  @include margin-leader();
-  @include margin-trailer();
+  @include padding-trailer();
   a {
     text-decoration: none;
   }
@@ -72,7 +88,8 @@ body {
 }
 
 .contact {
-  li { margin: 0 .5rem;}
+  font-size: .75rem;
+  li { margin: 0 .5em;}
   .line {text-decoration: underline;}
 }
 
