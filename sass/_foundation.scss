@@ -34,8 +34,8 @@ a {
   margin: 0 auto;
   width: 473/2 * 1px;
   @include breakpoint($hidpi) {
-    @include margin-trailer(-2);
-    @include margin-leader(-2);
+    @include margin-trailer(-1);
+    @include margin-leader(-1);
     @include scale(0.5, 0.5);
   }
 }

@@ -45,17 +45,17 @@
 @media screen { .news { clear: both; }
   img { max-width: 100%; }
   body { background: #61183b; color: #ffa031; } }
-@media screen and (min-width: 830px) { body { background: url('../img/curlleft.png?1404595079') 0 0 no-repeat, url('../img/curlright.png?1404595061') 100% 0 no-repeat, #61183b; } }
+@media screen and (min-width: 830px) { body { background: url('../img/curlleft.png?1404863334') 0 0 no-repeat, url('../img/curlright.png?1404863296') 100% 0 no-repeat, #61183b; } }
 
 @media screen { a:link { color: #f6f3d9; }
   a:visited { color: #ece6b0; }
   a:hover, a:active, a:focus { color: white; }
-  .logo { background: url('../img/logo.png?1404595157'); margin-right: auto; margin-left: auto; width: 278px; height: 307px; }
+  .logo { background: url('../img/logo.png?1404863214'); margin-right: auto; margin-left: auto; width: 278px; height: 307px; }
   .logo_tinmagpie { display: block; margin: 0 auto; width: 236.5px; } }
-@media screen and (min-resolution: 1.5dppx), screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (min-resolution: 144dpi) { .logo_tinmagpie { margin-bottom: -2.66667rem; margin-top: -2.66667rem; -moz-transform: scale(0.5, 0.5); -ms-transform: scale(0.5, 0.5); -o-transform: scale(0.5, 0.5); -webkit-transform: scale(0.5, 0.5); transform: scale(0.5, 0.5); } }
+@media screen and (min-resolution: 1.5dppx), screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (min-resolution: 144dpi) { .logo_tinmagpie { margin-bottom: -1.33333rem; margin-top: -1.33333rem; -moz-transform: scale(0.5, 0.5); -ms-transform: scale(0.5, 0.5); -o-transform: scale(0.5, 0.5); -webkit-transform: scale(0.5, 0.5); transform: scale(0.5, 0.5); } }
 
 @media screen { .subscribe-here { margin: 0 auto; } }
-@media screen and (min-width: 595px) { .subscribe-here { background: url('../img/bg_form.png?1404852024') no-repeat; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 246px 91px 0 227px; width: 540px; height: 442px; } }
+@media screen and (min-width: 595px) { .subscribe-here { background: url('../img/bg_form.png?1404863171') no-repeat; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 246px 91px 0 227px; width: 540px; height: 442px; } }
 @media screen { .subscribe-here input { background: #ffdcb8; border: 0; color: #b85d00; font-size: .75rem; padding: .25rem .25rem; width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; }
   .subscribe-here ::-webkit-input-placeholder { /* WebKit browsers */ color: #b85d00; }
   .subscribe-here :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ color: #b85d00; opacity: 1; }
@@ -64,7 +64,7 @@
   .subscribe-here .button { background: #de1861; border-radius: .25rem; color: #f9c9db; cursor: pointer; }
   .main { border-bottom: #ffa031 dashed 1px; padding-bottom: 1.33333rem; padding-left: 5%; padding-right: 5%; }
   .news { padding-top: 1.33333rem; }
-  footer { border-top: 0.25rem #61183b solid; padding-top: 1.33333rem; background: url('../img/stripe.png?1404595111'); } }
+  footer { border-top: 0.25rem #61183b solid; padding-top: 1.33333rem; background: url('../img/stripe.png?1404863073'); } }
 @media print { body { font-size: 12pt; line-height: 1.25; }
   h1 { font-size: 36pt; line-height: 1.25; }
   h2 { font-size: 24pt; line-height: 1.25; }
